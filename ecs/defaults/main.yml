@@ -1,0 +1,17 @@
+# Default component state
+ecs_state: present
+
+# EC2 instance type to use
+ecs_instance_type: "t2.medium"
+
+# Region for EC2 launches
+ecs_ec2_region: us-east-1
+
+# EC2 image that contains a Docker server + ECS Agent, AWS provides a suitable default
+ecs_ami_id: "ami-a7a242da"
+
+# IAM role that will be used to call the AWS ECS API.  This is normally created when you create a default cluster through the AWS console
+ecs_instance_iam_role: "ecs_instance_role"
+
+# Name of this environment, e.g. development, test, staging, production
+ecs_env: development

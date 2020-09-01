@@ -1,0 +1,14 @@
+---
+# create s3 bucket
+- s3_bucket:
+    name: my-samplebucket
+    state: present
+
+# Upload object into s3 bucket
+- name: PUT/upload with metadata
+  aws_s3:
+    bucket: my-samplebucket
+    object: /my/desired/key.txt
+    src: /usr/local/myfile.txt
+    mode: put
+    metadata: 'Content-Encoding=gzip,Cache-Control=no-cache'

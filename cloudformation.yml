@@ -1,0 +1,35 @@
+
+# create cloud formation template by passing template from S3 bucket
+# AWS Credentials can be set in boto config file for centralised access or we can export aws_access_key_id and aws_secret_access_key as env.
+---
+ - name: create a stack, pass in the template via an URL
+   cloudformation:
+     stack_name: "ansible-cloudformation"
+     state: present
+     region: us-east-1
+     disable_rollback: true
+     template_url: https://s3.amazonaws.com/my-samplebucket/cloudformation.template
+     template_parameters:
+       KeyName: testname
+       DiskType: ephemeral
+       InstanceType: m1.small
+       ClusterSize: 3
+     tags:
+       Stack: ansible-cloudformation
+
+
+---
+ - name: create a stack, pass in the template body via lookup template
+   cloudformation:
+    stack_name: "ansible-cloudformation"
+    state: present
+    region: us-east-1
+    disable_rollback: true
+    template_body: "{{ lookup('template', 'cloudformation.j2') }}"
+    template_parameters:
+      KeyName: jmartin
+      DiskType: ephemeral
+      InstanceType: m1.small
+      ClusterSize: 3
+    tags:
+      Stack: ansible-cloudformation
