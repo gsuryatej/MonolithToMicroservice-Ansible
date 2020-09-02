@@ -2,9 +2,9 @@
   ecs_taskdefinition:
     family: nginx
     containers:
-    - name: nginx
+    - name: containername
       essential: true
-      image: "nginx"
+      image: "ecrrepo/imagename"
       portMappings:
       - containerPort: 8080
         hostPort:      8080
