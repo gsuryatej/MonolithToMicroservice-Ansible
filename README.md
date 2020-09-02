@@ -20,3 +20,8 @@ Note that if you store your credentials in vars_file, you need to refer to them 
 We can also have a boto config file to access the creds and secrets. /etc/boto.cfg or ~/.aws/credentials
 
 
+Architecture:
+
+![image](https://user-images.githubusercontent.com/49281318/91942437-93a0ac00-ed18-11ea-91af-4ef5e4faa0bb.png)
+
+
