@@ -24,7 +24,7 @@ Architecture:
 
 ![image](https://user-images.githubusercontent.com/49281318/91942437-93a0ac00-ed18-11ea-91af-4ef5e4faa0bb.png)
 
-Refernence:
+
 ![image](https://user-images.githubusercontent.com/49281318/92122487-1b6ddf80-ee19-11ea-8eca-16118a8af7a5.png)
 
 
